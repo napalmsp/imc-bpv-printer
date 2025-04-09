@@ -1,0 +1,26 @@
+feign:
+  client:
+    config:
+      default:
+        #readTimeout: 5000
+        #connectTimeout: 5000
+        #maxAttempts: 10
+        #maxPeriod: 10000
+        period: 1000000
+logging:
+  level:
+    web: DEBUG
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+spring:
+  application:
+    name: insanos-bpv-base
+  security:
+    user:
+      name: user
+      password: 47301c34-8eda-4dd8-9bc4-0015c0c98a29

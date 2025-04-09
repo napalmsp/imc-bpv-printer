@@ -1,0 +1,1 @@
+web: java -Dspring.server.port=$PORT -Dspring.profiles.active=$ACTIVEPROFILES -Dserver.port=$PORT $JAVA_OPTS -jar target/insanos-bpv-0.0.1-SNAPSHOT.jar
