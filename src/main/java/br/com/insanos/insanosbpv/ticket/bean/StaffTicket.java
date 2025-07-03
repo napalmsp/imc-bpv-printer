@@ -1,10 +1,9 @@
-package br.com.insanos.insanosbpv.ticket;
+package br.com.insanos.insanosbpv.ticket.bean;
 
 import lombok.Builder;
 import lombok.Data;
 import lombok.Singular;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 

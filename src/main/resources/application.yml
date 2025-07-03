@@ -17,6 +17,9 @@ logging:
           descriptor:
             sql:
               BasicBinder: TRACE
+queue:
+  bpv:
+    ticket: true
 spring:
   application:
     name: insanos-bpv-base
@@ -24,3 +27,34 @@ spring:
     user:
       name: user
       password: 47301c34-8eda-4dd8-9bc4-0015c0c98a29
+  rabbitmq:
+    exchangeName: imc-amqp.topic.exchange
+    listener:
+      direct:
+        prefetch: 1
+        retry:
+          enabled: true
+          initial-interval: 3s
+          max-attempts: 6
+          max-interval: 10s
+          multiplier: 2
+      simple:
+        prefetch: 1
+        retry:
+          enabled: true
+          initial-interval: 3s
+          max-attempts: 6
+          max-interval: 10s
+          multiplier: 2
+    host: 7aoqqb.stackhero-network.com
+    password: i8lrHCFgmz6dk52tpXZr9WaIIS8i1Wqh
+    port: 5671
+    username: admin
+    virtualHost: /
+    ssl:
+      enabled: true
+      algorithm: TLSv1.2
+    template:
+      exchange: imc-amqp.topic.exchange
+server:
+  port: 8081
